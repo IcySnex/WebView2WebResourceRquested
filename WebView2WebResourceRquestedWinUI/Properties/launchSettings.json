@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WebView2WebResourceRquestedWinUI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "WebView2WebResourceRquestedWinUI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
