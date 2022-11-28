@@ -11,7 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebView2WebResourceRquested
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebView2WebResourceRquestedWpf", "WebView2WebResourceRquestedWpf\WebView2WebResourceRquestedWpf.csproj", "{85114410-1DC5-4BA3-A59C-C268491BCE2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebView2WebResourceRquestedWinUI", "WebView2WebResourceRquestedWinUI\WebView2WebResourceRquestedWinUI.csproj", "{BD35B38E-5041-4FCF-8AC1-E3B0B6DB5A44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebView2WebResourceRquestedWinUI", "WebView2WebResourceRquestedWinUI\WebView2WebResourceRquestedWinUI.csproj", "{BD35B38E-5041-4FCF-8AC1-E3B0B6DB5A44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebView2HttpServer", "WebView2HttpServer\WebView2HttpServer.csproj", "{DE304E4A-D832-41F2-BE46-5CBDC5A61902}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -157,6 +159,36 @@ Global
 		{BD35B38E-5041-4FCF-8AC1-E3B0B6DB5A44}.Release|x86.ActiveCfg = Release|x86
 		{BD35B38E-5041-4FCF-8AC1-E3B0B6DB5A44}.Release|x86.Build.0 = Release|x86
 		{BD35B38E-5041-4FCF-8AC1-E3B0B6DB5A44}.Release|x86.Deploy.0 = Release|x86
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Debug|Any CPU.Build.0 = Debug|x64
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Debug|Any CPU.Deploy.0 = Debug|x64
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Debug|ARM.ActiveCfg = Debug|ARM
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Debug|ARM.Build.0 = Debug|ARM
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Debug|ARM.Deploy.0 = Debug|ARM
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Debug|ARM64.ActiveCfg = Debug|x64
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Debug|ARM64.Build.0 = Debug|x64
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Debug|ARM64.Deploy.0 = Debug|x64
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Debug|x64.ActiveCfg = Debug|x64
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Debug|x64.Build.0 = Debug|x64
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Debug|x64.Deploy.0 = Debug|x64
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Debug|x86.ActiveCfg = Debug|x86
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Debug|x86.Build.0 = Debug|x86
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Debug|x86.Deploy.0 = Debug|x86
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Release|Any CPU.ActiveCfg = Release|x64
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Release|Any CPU.Build.0 = Release|x64
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Release|Any CPU.Deploy.0 = Release|x64
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Release|ARM.ActiveCfg = Release|ARM
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Release|ARM.Build.0 = Release|ARM
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Release|ARM.Deploy.0 = Release|ARM
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Release|ARM64.ActiveCfg = Release|x64
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Release|ARM64.Build.0 = Release|x64
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Release|ARM64.Deploy.0 = Release|x64
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Release|x64.ActiveCfg = Release|x64
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Release|x64.Build.0 = Release|x64
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Release|x64.Deploy.0 = Release|x64
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Release|x86.ActiveCfg = Release|x86
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Release|x86.Build.0 = Release|x86
+		{DE304E4A-D832-41F2-BE46-5CBDC5A61902}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
