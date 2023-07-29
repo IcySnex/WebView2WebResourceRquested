@@ -50,7 +50,7 @@ namespace WebView2WebResourceRquestedSample
 
         private async Task<CoreWebView2WebResourceResponse> CustomASync()
         {
-            IRandomAccessStream randomMemoryStream = new InMemoryRandomAccessStream();
+            var randomMemoryStream = new InMemoryRandomAccessStream();
             await randomMemoryStream.WriteAsync(Encoding.UTF8.GetBytes("Moby").AsBuffer());
             var cwv2Response = WebView2.CoreWebView2.Environment.CreateWebResourceResponse(randomMemoryStream, 200, "OK", "Content-Type: text/plain");
             cwv2Response.Headers.AppendHeader("Access-Control-Allow-Origin", baseHttpUrl);
@@ -79,7 +79,7 @@ namespace WebView2WebResourceRquestedSample
 
             //Copy the stream to a Memory Stream.
             var stream = await response.Content.ReadAsStreamAsync();
-            InMemoryRandomAccessStream randomMemoryStream = new InMemoryRandomAccessStream();
+            var randomMemoryStream = new InMemoryRandomAccessStream();
             await RandomAccessStream.CopyAsync(stream.AsInputStream(), randomMemoryStream);
             var cwv2Response = WebView2.CoreWebView2.Environment.CreateWebResourceResponse(randomMemoryStream, (int)response.StatusCode, "OK", "");
 
