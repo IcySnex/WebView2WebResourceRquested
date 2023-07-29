@@ -4,8 +4,10 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Storage.Streams;
 using Windows.UI.Xaml.Controls;
 
 namespace WebView2WebResourceRquestedSample
@@ -36,7 +38,7 @@ namespace WebView2WebResourceRquestedSample
 
             if (e.Request.Uri == "https://httpbin.org/custom")
             {
-                e.Response = Custom();
+                e.Response = await CustomASync();
             }
             else if (e.Request.Uri == "https://httpbin.org/get")
             {
@@ -46,10 +48,11 @@ namespace WebView2WebResourceRquestedSample
             deferral.Complete();
         }
 
-        private CoreWebView2WebResourceResponse Custom()
+        private async Task<CoreWebView2WebResourceResponse> CustomASync()
         {
-            var memoryStream = new MemoryStream(Encoding.UTF8.GetBytes("Moby"));
-            var cwv2Response = WebView2.CoreWebView2.Environment.CreateWebResourceResponse(memoryStream.AsRandomAccessStream(), 200, "OK", "Content-Type: text/plain");
+            IRandomAccessStream randomMemoryStream = new InMemoryRandomAccessStream();
+            await randomMemoryStream.WriteAsync(Encoding.UTF8.GetBytes("Moby").AsBuffer());
+            var cwv2Response = WebView2.CoreWebView2.Environment.CreateWebResourceResponse(randomMemoryStream, 200, "OK", "Content-Type: text/plain");
             cwv2Response.Headers.AppendHeader("Access-Control-Allow-Origin", baseHttpUrl);
             return cwv2Response;
         }
@@ -76,9 +79,9 @@ namespace WebView2WebResourceRquestedSample
 
             //Copy the stream to a Memory Stream.
             var stream = await response.Content.ReadAsStreamAsync();
-            MemoryStream memoryStream = new MemoryStream();
-            stream.CopyTo(memoryStream);
-            var cwv2Response = WebView2.CoreWebView2.Environment.CreateWebResourceResponse(memoryStream.AsRandomAccessStream(), (int)response.StatusCode, response.ReasonPhrase, "");
+            InMemoryRandomAccessStream randomMemoryStream = new InMemoryRandomAccessStream();
+            await RandomAccessStream.CopyAsync(stream.AsInputStream(), randomMemoryStream);
+            var cwv2Response = WebView2.CoreWebView2.Environment.CreateWebResourceResponse(randomMemoryStream, (int)response.StatusCode, "OK", "");
 
             //Default is what I would normally expect.
             //var stream = await response.Content.ReadAsStreamAsync();
